@@ -13,6 +13,7 @@
 		532DC65E25D222AA008C432D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532DC65C25D222AA008C432D /* Main.storyboard */; };
 		532DC66025D222AB008C432D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532DC65F25D222AB008C432D /* Assets.xcassets */; };
 		532DC66325D222AB008C432D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532DC66125D222AB008C432D /* LaunchScreen.storyboard */; };
+		53EAF5F925D4DDB700692AD3 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EAF5F825D4DDB700692AD3 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		532DC65F25D222AB008C432D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		532DC66225D222AB008C432D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		532DC66425D222AB008C432D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EAF5F825D4DDB700692AD3 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				532DC65625D222AA008C432D /* AppDelegate.swift */,
 				532DC65825D222AA008C432D /* SceneDelegate.swift */,
 				532DC65A25D222AA008C432D /* ViewController.swift */,
+				53EAF5F825D4DDB700692AD3 /* BlueViewController.swift */,
 				532DC65C25D222AA008C432D /* Main.storyboard */,
 				532DC65F25D222AB008C432D /* Assets.xcassets */,
 				532DC66125D222AB008C432D /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				532DC65B25D222AA008C432D /* ViewController.swift in Sources */,
 				532DC65725D222AA008C432D /* AppDelegate.swift in Sources */,
+				53EAF5F925D4DDB700692AD3 /* BlueViewController.swift in Sources */,
 				532DC65925D222AA008C432D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
