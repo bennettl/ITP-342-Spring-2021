@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MadLibViewController: UIViewController {
+class MadLibViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -18,7 +18,6 @@ class MadLibViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     
     @IBOutlet weak var lessOrMoreSegmentedControl: UISegmentedControl!
-    
     
     @IBOutlet weak var animalSegmentedControl: UISegmentedControl!
     
@@ -36,6 +35,9 @@ class MadLibViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField.delegate = self
+        verbTextField.delegate = self
 
         lessOrMoreSegmentedControl.selectedSegmentIndex = 1
     }
@@ -54,17 +56,36 @@ class MadLibViewController: UIViewController {
     }
     
     @IBAction func numberOfPetsDidChange(_ sender: UIStepper) {
+        numberOfPetsLabel.text = "\(Int(sender.value))"
     }
     
     @IBAction func createStoryDidTapped(_ sender: UIButton) {
+                
+        // At age 21, John went to Los Angeles to act. He brought 5 dogs with him, and wore a shirt with his lucky number 8. He lived happliy ever after.
         
-        let alert = UIAlertController(title: "Story", message: nil, preferredStyle: .alert)
+        let index = animalSegmentedControl.selectedSegmentIndex
+        let selectedAnimal = animalSegmentedControl.titleForSegment(at: index)
         
+        var story = "At age \(ageTextField.text!), \(nameTextField.text!) went to \(cityTextField.text!) to \(verbTextField.text!). He brought \(Int(petsStepper.value)) \(selectedAnimal!) with him, and wore a shirt with his lucky number \(Int(favoriteNumberSlider.value))"
+        
+        if happyEndingSwitch.isOn{
+            story += " He lived happliy ever after."
+        } else{
+            story += " It didn't end too well..."
+        }
+                
+        let alert = UIAlertController(title: "Story", message: story, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
+  
+                
         alert.addAction(okAction)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
