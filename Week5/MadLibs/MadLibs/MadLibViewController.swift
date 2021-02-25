@@ -42,8 +42,16 @@ class MadLibViewController: UIViewController, UITextFieldDelegate {
         lessOrMoreSegmentedControl.selectedSegmentIndex = 1
     }
     
+    func doSomething(){
+        print("1")
+        print("2")
+        print("3")
+    }
+    
     @IBAction func lessOrMoreDidTapped(_ sender: UISegmentedControl) {
     
+        doSomething()
+        
         if sender.selectedSegmentIndex == 0{
             containerView.isHidden = true
         } else if sender.selectedSegmentIndex == 1{
