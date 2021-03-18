@@ -18,7 +18,6 @@ class NewQuoteViewController: UIViewController {
     
     var aRandomNumber: Int = 10
     
-    
     var completionHandler: AddQuoteCompletionHandler?
     
     // 3

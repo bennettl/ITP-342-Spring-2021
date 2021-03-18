@@ -11,9 +11,30 @@ class QuotesViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var quotesTableView: UITableView!
     
+    let USER_DEFAULTS_KEY_USER_ID = "userId"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Set
+        UserDefaults.standard.set("12345", forKey: USER_DEFAULTS_KEY_USER_ID)
+        
+        // Get
+        let userId = UserDefaults.standard.string(forKey: USER_DEFAULTS_KEY_USER_ID)
+        
+        // file:///Users/.../Documents/
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        // file:///Users/.../Documents/myfile.txt
+        let filepath = documentsDirectory.appendingPathComponent("myfile.txt")
+        
+        do{
+            let message = "We have something to save"
+            try message.write(to: filepath, atomically: true, encoding: .utf8)
+        } catch{
+            print("Could not save to file")
+        }
+        
     }
     
     @IBAction func editDidTapped(_ sender: UIBarButtonItem) {
