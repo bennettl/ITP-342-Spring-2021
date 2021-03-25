@@ -15,7 +15,9 @@ class MyViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectiionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        
+        cell.mainLabel.text = "\(indexPath.item)"
         
         cell.backgroundColor = UIColor(
             red: CGFloat(arc4random_uniform(UInt32(255.0)))/255.0,

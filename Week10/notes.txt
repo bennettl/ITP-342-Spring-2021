@@ -1,0 +1,52 @@
+
+Client server model
+
+								 HTTPS
+Client (iOS) <--------> Server (NodeJS)
+
+Data
+------
+JSON
+XML (Plist)
+
+What can we do??
+------
+Defined in the API: Application Programming Interface
+	- Native
+	- Web
+
+API Architecture
+--------
+RESTful - representation state transfer
+	- nouns (resources) and verbs (methods)
+	- endpoints (urls that identify a resource)
+	
+	- create, read, update, delete (CRUD)
+
+	
+		- create (verb)
+			- /users (endpoint)
+			- POST
+
+		- read
+			- /users/:id (endpoint)
+			- GET
+
+		- update
+			- /users/:id (endpoint)
+			- PUT
+
+		- delete 
+			- /users/:id (endpoint)
+			- DELETE
+
+	- photos
+	- albums
+	- events
+
+
+SOAP 
+
+
+
+

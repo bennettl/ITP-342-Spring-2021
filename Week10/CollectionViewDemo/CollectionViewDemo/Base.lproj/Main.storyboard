@@ -53,21 +53,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nOC-OJ-d83">
-                                    <size key="itemSize" width="128" height="56"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wQs-El-61d">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectiionCell" id="wWh-EJ-gYa">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="56"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="wWh-EJ-gYa" customClass="PhotoCell" customModule="CollectionViewDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5TE-lo-nz3">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="164" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-jP-FY3">
+                                                    <rect key="frame" x="61" y="47" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eLT-jP-FY3" firstAttribute="centerX" secondItem="5TE-lo-nz3" secondAttribute="centerX" id="cyp-49-fLa"/>
+                                                <constraint firstItem="eLT-jP-FY3" firstAttribute="centerY" secondItem="5TE-lo-nz3" secondAttribute="centerY" id="n6E-oh-B8x"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="128" height="56"/>
+                                        <size key="customSize" width="164" height="115"/>
+                                        <connections>
+                                            <outlet property="mainLabel" destination="eLT-jP-FY3" id="pVi-fx-cqP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
